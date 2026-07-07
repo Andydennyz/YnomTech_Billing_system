@@ -1,3 +1,4 @@
+import Sidebar from "@/components/Sidebar/Sidebar";
 import type { DashboardLayoutProps } from "./DashboardLayout.types";
 
 /**
@@ -5,20 +6,20 @@ import type { DashboardLayoutProps } from "./DashboardLayout.types";
  * Dashboard Layout
  * -----------------------------------------------------------------------------
  *
- * This is the application's primary layout.
+ * This is the main layout used by all authenticated pages.
  *
- * Every authenticated page
- * (Dashboard, Customers, Payments, Reports...)
- * will render inside this layout.
+ * Structure:
  *
- * Current Structure:
+ * ┌──────────────────────────────────────────────┐
+ * │ Sidebar │ Header                            │
+ * │         ├───────────────────────────────────┤
+ * │         │                                   │
+ * │         │          Main Content             │
+ * │         │                                   │
+ * └──────────────────────────────────────────────┘
  *
- * Sidebar
- * Header
- * Content
- *
- * Later we'll replace the placeholders
- * with reusable components.
+ * Later we'll replace the Header placeholder
+ * with our own reusable Header component.
  * -----------------------------------------------------------------------------
  */
 
@@ -27,26 +28,23 @@ export default function DashboardLayout({
 }: DashboardLayoutProps) {
   return (
     <div className="flex h-screen bg-[var(--background)]">
-
       {/* Sidebar */}
-      <aside className="w-72 border-r border-[var(--border)] bg-[var(--surface)]">
-        Sidebar
-      </aside>
+      <Sidebar />
 
+      {/* Main Area */}
       <div className="flex flex-1 flex-col">
-
         {/* Header */}
         <header className="flex h-16 items-center border-b border-[var(--border)] bg-[var(--surface)] px-6">
-          Header
+          <h2 className="text-lg font-semibold text-white">
+            Dashboard
+          </h2>
         </header>
 
-        {/* Main Content */}
+        {/* Page Content */}
         <main className="flex-1 overflow-y-auto p-8">
           {children}
         </main>
-
       </div>
-
     </div>
   );
 }
