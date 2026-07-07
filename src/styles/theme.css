@@ -1,0 +1,29 @@
+/*
+|--------------------------------------------------------------------------
+| YnomTech Theme
+|--------------------------------------------------------------------------
+|
+| These CSS variables define the colors used
+| throughout the entire application.
+|
+| Changing a value here updates the whole UI.
+|
+*/
+
+:root {
+  --background: #050505;
+  --surface: #0b0b0b;
+  --surface-light: #111111;
+
+  --border: #1a1a1a;
+
+  --primary: #00f5ff;
+  --secondary: #ff8c00;
+
+  --success: #00ff85;
+  --warning: #ffc107;
+  --danger: #ff3d71;
+
+  --text: #ffffff;
+  --text-muted: #a1a1aa;
+}

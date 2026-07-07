@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/*
+|--------------------------------------------------------------------------
+| Global Styles
+|--------------------------------------------------------------------------
+|
+| These styles apply to the entire application.
+| Think of this file as the reset + default behavior.
+|
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
